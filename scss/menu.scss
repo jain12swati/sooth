@@ -1,0 +1,115 @@
+.menubar{
+    position: relative;
+    display: flex;
+    justify-content:space-between;
+   // border: 1px solid purple;
+}
+
+.left-links{
+    text-align: left;
+  //  border: 1px solid gold;
+}
+.right-links{
+    text-align: right;
+    display: none;
+    order: 6;
+}
+.mid{
+   width: 500px;
+}
+.logo{
+    
+    font-size: 32px;
+    letter-spacing: 1.6;
+    font-family: Somatic-Rounded, sans-serif;
+    text-align: center;
+    color: $logotext;
+    order: 2;
+}
+
+
+.nav{
+    margin-top: 25px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.nav li{
+    text-transform: capitalize;
+    color: $oxfort-blue;
+    display: none;
+    order: 3;
+}
+.nav li a{
+    color: $oxfort-blue;
+    padding: 5px 15px 5px 15px;
+}
+
+.nav li a:hover{
+    background-color: $athens-gray;
+}
+
+.nav-active{
+ border-bottom: 5px solid $cape-palliser;
+}
+
+.active .nav-items{
+    display: block;
+    
+}
+
+ .toggle{
+    font-size: 18px;
+    padding: 10px;      
+    order: 1;
+   
+}
+/*
+@media all and (max-width:768px){
+    .menubar .nav{
+        display: none;
+    }
+    .mid .toggleicon{
+        float: left;
+        display: block;
+    }
+
+    .nav.responsive {position: relative;}
+    .nav.responsive .toggleicon {
+      position: absolute;
+      right: 0;
+      top: 0;
+    }
+    .nav.responsive a {
+      float: none;
+      display: block;
+      text-align: left;
+      background-color: brown;
+    }
+}*/
+@media all and (min-width:960px) {
+    .nav-items{
+        position: relative;
+        display: block;
+        width: auto;
+        order: 1;
+    }
+
+    .nav{
+        align-items: flex-start;
+        flex-wrap: nowrap;
+    }
+
+    .toggle{
+        display: none;
+        flex: 1;
+        text-align: right;
+    }
+
+    .logo{
+        flex: 1;
+        order: 0;
+    }
+
+    
+}
